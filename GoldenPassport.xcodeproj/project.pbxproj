@@ -62,6 +62,8 @@
 		F699811E1E6AC75900DDA6CA /* HttpServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699811D1E6AC75900DDA6CA /* HttpServer.swift */; };
 		F69981201E6AD88500DDA6CA /* KeyboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699811F1E6AD88500DDA6CA /* KeyboardMonitor.swift */; };
 		F69981231E6AE55700DDA6CA /* HTTPPortConfigWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69981211E6AE55700DDA6CA /* HTTPPortConfigWindow.swift */; };
+		F6AA00041E7000000000A001 /* ExportQRCodeWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA00031E7000000000A001 /* ExportQRCodeWindow.swift */; };
+		F6AA00021E7000000000A001 /* QRCodeExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA00011E7000000000A001 /* QRCodeExporter.swift */; };
 		F69981241E6AE55700DDA6CA /* HTTPPortConfigWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69981221E6AE55700DDA6CA /* HTTPPortConfigWindow.xib */; };
 		F6D14B791E6273460078FD22 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D14B781E6273460078FD22 /* DataManager.swift */; };
 		F6E039261E6473F2009499DD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E039251E6473F2009499DD /* Carbon.framework */; };
@@ -176,6 +178,8 @@
 		F699811D1E6AC75900DDA6CA /* HttpServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServer.swift; sourceTree = "<group>"; };
 		F699811F1E6AD88500DDA6CA /* KeyboardMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardMonitor.swift; sourceTree = "<group>"; };
 		F69981211E6AE55700DDA6CA /* HTTPPortConfigWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPPortConfigWindow.swift; sourceTree = "<group>"; };
+		F6AA00031E7000000000A001 /* ExportQRCodeWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportQRCodeWindow.swift; sourceTree = "<group>"; };
+		F6AA00011E7000000000A001 /* QRCodeExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeExporter.swift; sourceTree = "<group>"; };
 		F69981221E6AE55700DDA6CA /* HTTPPortConfigWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTTPPortConfigWindow.xib; sourceTree = "<group>"; };
 		F6D14B781E6273460078FD22 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F6E039251E6473F2009499DD /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
@@ -236,6 +240,8 @@
 				F61B6BA41E617EDE00C3E272 /* AddVerifyKeyWindow.swift */,
 				F61B6BA11E61787A00C3E272 /* AddVerifyKeyWindow.xib */,
 				F69981211E6AE55700DDA6CA /* HTTPPortConfigWindow.swift */,
+				F6AA00031E7000000000A001 /* ExportQRCodeWindow.swift */,
+				F6AA00011E7000000000A001 /* QRCodeExporter.swift */,
 				F69981221E6AE55700DDA6CA /* HTTPPortConfigWindow.xib */,
 				F6D14B781E6273460078FD22 /* DataManager.swift */,
 				F630E1C41E62BA0F004FA7C1 /* OTPAuthURLParser.swift */,
@@ -508,6 +514,8 @@
 				F61B6C4D1E61B78E00C3E272 /* TOTPGenerator.m in Sources */,
 				F61B6B8A1E6135B600C3E272 /* AppDelegate.swift in Sources */,
 				F69981231E6AE55700DDA6CA /* HTTPPortConfigWindow.swift in Sources */,
+				F6AA00041E7000000000A001 /* ExportQRCodeWindow.swift in Sources */,
+				F6AA00021E7000000000A001 /* QRCodeExporter.swift in Sources */,
 				F644B4291FA2E36D00B4466C /* GTMNSThread+Blocks.m in Sources */,
 				F644B4401FA2E36D00B4466C /* GTMLogger.m in Sources */,
 				F644B4601FA2E5B100B4466C /* GTMSynchronizationAsserts.m in Sources */,

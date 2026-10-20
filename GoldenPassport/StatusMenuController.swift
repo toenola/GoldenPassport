@@ -12,6 +12,7 @@ import Swifter
 class StatusMenuController: NSObject {
     var addVerifyKeyWindow: AddVerifyKeyWindow!
     var httpPortConfigWindow: HTTPPortConfigWindow!
+    var exportQRCodeWindow: ExportQRCodeWindow!
 
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var addMenuItem: NSMenuItem!
@@ -38,6 +39,7 @@ class StatusMenuController: NSObject {
     override func awakeFromNib() {
         addVerifyKeyWindow = AddVerifyKeyWindow()
         httpPortConfigWindow = HTTPPortConfigWindow()
+        exportQRCodeWindow = ExportQRCodeWindow()
 
         loadIcons()
         initStatusItem()
@@ -83,6 +85,10 @@ class StatusMenuController: NSObject {
         timerMenuItem = NSMenuItem()
         statusMenu.insertItem(timerMenuItem, at: 0)
         enableAutoStart.state = NSControl.StateValue(rawValue: DataManager.shared.getHttpServerAutoStart() ? 1 : 0)
+
+        let exportQRCodeMenuItem = NSMenuItem(title: "导出二维码…", action: #selector(exportQRCodeClicked), keyEquivalent: "")
+        exportQRCodeMenuItem.target = self
+        statusMenu.insertItem(exportQRCodeMenuItem, at: statusMenu.index(of: exportMenuItem) + 1)
     }
 
     @objc func openMenu(_ sender: AnyObject?) {
@@ -283,6 +289,24 @@ class StatusMenuController: NSObject {
             return
         }
         DataManager.shared.exportData(dist: savePanel.url!)
+    }
+
+    @objc func exportQRCodeClicked(_ sender: NSMenuItem) {
+        NSApp.activate(ignoringOtherApps: true)
+        if !exportQRCodeWindow.window!.isVisible {
+            let alert = NSAlert()
+            alert.messageText = "二维码中包含账号密钥"
+            alert.informativeText = "任何人拿到二维码或其截图，都能生成你的验证码。请只在可信设备上扫描，导出的图片用完后及时删除。"
+            alert.alertStyle = .warning
+            alert.addButton(withTitle: "继续")
+            alert.addButton(withTitle: "取消")
+            if alert.runModal() != NSApplication.ModalResponse.alertFirstButtonReturn {
+                return
+            }
+        }
+        exportQRCodeWindow.reload()
+        exportQRCodeWindow.showWindow(nil)
+        exportQRCodeWindow.window?.makeKeyAndOrderFront(nil)
     }
     
     @IBAction func configHttpPortClicked(_ sender: NSMenuItem) {

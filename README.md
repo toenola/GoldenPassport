@@ -21,6 +21,7 @@ A native implementation of Google Authenticator for Mac based on Swift3.
 - Use a global hot key(`Shift+Cmd+[0-9]`) to direct fill out the verification code
 - Click an auth-menu to copy the verification code to the `PasteBoard`
 - Export/Import authentication codes
+- Export accounts as QR codes for other 2FA apps (standard `otpauth://` per account, or Google Authenticator batch migration codes for all accounts)
 
 # How to use
 

@@ -51,6 +51,13 @@ final class DataManager {
         return result
     }
 
+    /// 所有已保存的 (名称, OTPAuth URL)，按名称排序
+    func allOTPAuthURLs() -> [(key: String, value: String)] {
+        return authData
+            .sorted { $0.key.localizedStandardCompare($1.key) == .orderedAscending }
+            .map { (key: $0.key, value: $0.value) }
+    }
+
     func dataCount() -> Int {
         return authData.count
     }
